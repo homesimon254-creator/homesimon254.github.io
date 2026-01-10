@@ -4,6 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Works Venture Limited - Light Up The World</title>
+    /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            cursor: pointer;
+            z-index: 9999;
+            transition: all 0.3s ease;
+            animation: popFloat 3s ease-in-out infinite;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.7);
+            animation: none;
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+        }
+
+        @keyframes popFloat {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            25% {
+                transform: translateY(-15px) scale(1.05);
+            }
+            50% {
+                transform: translateY(0) scale(1);
+            }
+            75% {
+                transform: translateY(-8px) scale(1.02);
+            }
+        }
     <style>
         * {
             margin: 0;
@@ -534,10 +579,12 @@
         </div>
     </section>
 <!-- Floating WhatsApp Button -->
-<a class="whatsapp-btn"
-   href="https://wa.me/254768879539?text=Hello%20Home%20Works%20Venture,%20I%20need%20your%20services."
+<a href="https://wa.me/254768879539?text=Hello%20Home%20Works%20Venture,%20I%20need%20your%20services." 
+   class="whatsapp-float" 
    target="_blank">
-   💬 WhatsApp Us
+    <svg viewBox="0 0 32 32" width="32" height="32">
+        <path fill="white" d="M16 0C7.163 0 0 7.163 0 16c0 2.828.734 5.482 2.016 7.797L0 32l8.406-2.203A15.96 15.96 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333c-2.547 0-4.984-.703-7.031-1.922l-.5-.297-5.203 1.359 1.391-5.078-.328-.531A13.283 13.283 0 0 1 2.667 16c0-7.364 5.969-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.281-9.948c-.406-.203-2.375-1.172-2.734-1.297-.359-.141-.625-.203-.891.203-.266.406-1.016 1.297-1.25 1.563-.234.266-.469.297-.875.094-.406-.203-1.703-.625-3.234-2-.203-1.078-.734-1.813-1.141-2.219-.406-.203-.047-.313.172-.406.172-.156.391-.422.594-.625.203-.203.266-.359.406-.625.141-.266.078-.469-.031-.656-.109-.203-.891-2.156-1.219-2.953-.313-.797-.625-.672-.891-.672-.234 0-.5-.031-.766-.031s-.703.094-1.063.469c-.359.375-1.391 1.359-1.391 3.313s1.422 3.844 1.625 4.109c.203.266 2.828 4.313 6.844 6.047.953.422 1.703.672 2.281.859.969.297 1.844.25 2.531.156.766-.109 2.375-.969 2.703-1.906.328-.938.328-1.734.234-1.906-.094-.172-.359-.266-.766-.469z"/>
+    </svg>
 </a>
 
     <!-- Footer -->
